@@ -1,0 +1,48 @@
+/* MODAL */
+
+.show {
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 73, 94, 0.8);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+.modal {
+  position: fixed;
+  width: 30rem;
+  height: 20rem;
+  background: #bdc3c7;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out;
+  transform: translateY(2.5rem);
+}
+.active-modal {
+  visibility: visible;
+  opacity: 1;
+}
+.active-modal .modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
